@@ -89,7 +89,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
               </div>
               <img
                 src={assets.bin_icon}
-                className="hidden group-hover:block w-4 cursor-pointer dark:invert"
+                className="hidden group-hover:block w-4 cursor-pointer not-dark:invert"
                 alt=""
                 onClick={e=> toast.promise(deleteChat(e, chat._id), {loading: 'deleting...'})}
               />
@@ -105,7 +105,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
       >
         <img
           src={assets.gallery_icon}
-          className="w-4.5 dark:invert"
+          className="w-4.5 not-dark:invert"
           alt=""
         />
         <div className="flex flex-col text-sm">
@@ -119,7 +119,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
         }}
         className="flex items-center gap-2 p-3 mt-4 border border-gray-300 dark:border-white/15 rounded-md cursor-pointer hover:scale-103 transition-all"
       >
-        <img src={assets.diamond_icon} className="w-4.5 dark:invert" alt="" />
+        <img src={assets.diamond_icon} className="w-4.5 not-dark:invert" alt="" />
         <div className="flex flex-col text-sm">
           <p>Credits : {user?.credits}</p>
           <p className="text-xs text-gray-400">
@@ -133,7 +133,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
         className="flex justify-between items-center gap-2 p-3 mt-4 border border-gray-300 dark:border-white/15 rounded-md"
       >
         <div className="flex items-center gap-2 text-sm">
-          <img src={assets.theme_icon} className="w-4 dark:invert" alt="" />
+          <img src={assets.theme_icon} className="w-4 not-dark:invert" alt="" />
           <p className="flex items-center gap-2 text-sm">Dark Mode</p>
         </div>
 
@@ -160,7 +160,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
           alt=""
         />
           <p className="flex-1 text-sm dark:text-primary truncate">{user ? user.name : "Login to your account"}</p>
-          {user && <img onClick={()=>logout()} src={assets.logout_icon} className="h-5 cursor-pointer hidden dark:invert group-hover:block"
+          {user && <img onClick={()=>logout()} src={assets.logout_icon} className="h-5 cursor-pointer hidden not-dark:invert group-hover:block"
  alt="" />}
 
       </div>
