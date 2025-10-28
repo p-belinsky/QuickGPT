@@ -160,7 +160,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
           alt=""
         />
           <p className="flex-1 text-sm dark:text-primary truncate">{user ? user.name : "Login to your account"}</p>
-          {user && <img onClick={()=>logout()} src={assets.logout_icon} className="h-5 cursor-pointer hidden group-hover:block md:block not-dark:invert"
+          {user && <img onClick={()=>logout()} src={assets.logout_icon} className="h-5 cursor-pointer hidden not-dark:invert group-hover:block"
  alt="" />}
 
       </div>
