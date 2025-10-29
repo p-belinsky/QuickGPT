@@ -73,7 +73,7 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
               : chat.name.toLowerCase().includes(search.toLowerCase())
           )
           .map((chat) => (
-            <div tabIndex={0} onClick={() => {navigate('/'); setSelectedChat(chat); setIsMenuOpen(false)}}
+            <div onClick={() => {navigate('/'); setSelectedChat(chat); setIsMenuOpen(false)}}
               key={chat._id}
               className="p-2 px-4 dark:bg-[#57317C]/10 border border-gray-300 dark:border-[#80609F]/15 rounded-md cursor-pointer flex justify-between group"
             >
@@ -89,7 +89,8 @@ const Sidebar = ({isMenuOpen, setIsMenuOpen}) => {
               </div>
               <img
                 src={assets.bin_icon}
-                className="hidden group-hover:block group-focus:block group-active:block w-4 cursor-pointer not-dark:invert"                alt=""
+                className="hidden group-hover:block w-4 cursor-pointer not-dark:invert"
+                alt=""
                 onClick={e=> toast.promise(deleteChat(e, chat._id), {loading: 'deleting...'})}
               />
             </div>
